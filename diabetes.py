@@ -16,7 +16,7 @@ model = data['model']
 x = data['x']
 
 def show_page():
-    st.write("<h1 style='text-align: center; color: black;'>مدل تشخیص دیابت در بانوان</h1>", unsafe_allow_html=True)
+    st.write("<h1 style='text-align: center; color: blue;'>مدل تشخیص دیابت در بانوان</h1>", unsafe_allow_html=True)
     st.write("<h2 style='text-align: center; color: gray;'>علائم خود را وارد کنید</h2>", unsafe_allow_html=True)
 
     Pregnancies = st.slider('تعداد بارداری', 0.0, 10.0, 1.0)
