@@ -18,6 +18,8 @@ x = data['x']
 def show_page():
     st.write("<h1 style='text-align: center; color: blue;'>مدل تشخیص دیابت در بانوان</h1>", unsafe_allow_html=True)
     st.write("<h2 style='text-align: center; color: gray;'>علائم خود را وارد کنید</h2>", unsafe_allow_html=True)
+    st.write("<h4 style='text-align: center; color: gray;'>Robo-Ai.ir طراحی شده توسط</h4>", unsafe_allow_html=True)
+    st.link_button("Robo-Ai بازگشت به", "https://robo-ai.ir")
 
     Pregnancies = st.slider('تعداد بارداری', 0.0, 10.0, 1.0)
 
