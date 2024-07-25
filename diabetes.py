@@ -18,7 +18,7 @@ model = data['model']
 x = data['x']
 
 def show_page():
-    st.write("<h2 style='text-align: center; color: blue;'>مدل تشخیص دیابت در بانوان 📋</h2>", unsafe_allow_html=True)
+    st.write("<h2 style='text-align: center; color: blue;'>تشخیص دیابت در بانوان 📋</h2>", unsafe_allow_html=True)
     st.write("<h5 style='text-align: center; color: gray;'>Robo-Ai.ir طراحی شده توسط</h5>", unsafe_allow_html=True)
     st.link_button("Robo-Ai بازگشت به", "https://robo-ai.ir")
     container = st.container(border=True)
