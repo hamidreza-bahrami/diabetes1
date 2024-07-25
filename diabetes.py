@@ -64,7 +64,7 @@ def show_page():
 
         y_prediction = model.predict(x)
         if y_prediction == 1:
-            text1 = '###بر اساس تحلیل من ، شما به دیابت نوع 2 مبتلا هستید'
+            text1 = 'بر اساس تحلیل من ، شما به دیابت نوع 2 مبتلا هستید'
             text2 = 'برای درمان به پزشک مراجعه کنید'
             text3 = 'Based On My Analysis, You Are Diagnosed With Type 2 Diabetes'
             text4 = 'Please Visit A Doctor As Soon As Possible'
