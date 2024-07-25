@@ -18,10 +18,11 @@ model = data['model']
 x = data['x']
 
 def show_page():
-    st.write("<h1 style='text-align: center; color: blue;'>مدل تشخیص دیابت در بانوان</h1>", unsafe_allow_html=True)
-    st.write("<h2 style='text-align: center; color: gray;'>علائم خود را وارد کنید</h2>", unsafe_allow_html=True)
-    st.write("<h4 style='text-align: center; color: gray;'>Robo-Ai.ir طراحی شده توسط</h4>", unsafe_allow_html=True)
+    st.write("<h2 style='text-align: center; color: blue;'>مدل تشخیص دیابت در بانوان 📋</h2>", unsafe_allow_html=True)
+    st.write("<h5 style='text-align: center; color: gray;'>Robo-Ai.ir طراحی شده توسط</h5>", unsafe_allow_html=True)
     st.link_button("Robo-Ai بازگشت به", "https://robo-ai.ir")
+    container = st.container(border=True)
+    container.write("<h6 style='text-align: right; color: gray;'>در بانوان II پرسشنامه تشخیص دیابت نوع 🩸</h6>", unsafe_allow_html=True)
     with st.sidebar:
         col1, col2, col3 = st.columns(3)
         with col1:
@@ -31,11 +32,11 @@ def show_page():
         with col3:
             st.write(' ')
         st.divider()
-        st.write("<h4 style='text-align: right; color: gray;'>تشخیص دیابت با دقت 98 درصد</h>", unsafe_allow_html=True)
+        st.write("<h4 style='text-align: center; color: blcak;'>تشخیص دیابت با هوش مصنوعی 🩸</h>", unsafe_allow_html=True)
         st.write("<h4 style='text-align: right; color: gray;'>ساخته شده با اطلاعات 420 کیس مبتلا به دیابت و سالم</h>", unsafe_allow_html=True)
         st.divider()
-        st.write('Developed & Designed by')
-        st.write('Hamidreza Bahrami')
+        st.write("<h5 style='text-align: center; color: black;'>طراحی و توسعه</h5>", unsafe_allow_html=True)
+        st.write("<h5 style='text-align: center; color: black;'>حمیدرضا بهرامی</h5>", unsafe_allow_html=True)
 
     Pregnancies = st.slider('تعداد بارداری', 0.0, 10.0, 1.0)
 
@@ -63,10 +64,10 @@ def show_page():
 
         y_prediction = model.predict(x)
         if y_prediction == 1:
-            text1 = ' بر اساس تحلیل من ، شما به دیابت نوع 2 مبتلا هستید'
+            text1 = '###بر اساس تحلیل من ، شما به دیابت نوع 2 مبتلا هستید'
             text2 = 'برای درمان به پزشک مراجعه کنید'
-            text3 = 'Based on my analysis, you are diagnosed with Type 2 Diabetes'
-            text4 = 'Please visit a doctor as soon as possible'
+            text3 = 'Based On My Analysis, You Are Diagnosed With Type 2 Diabetes'
+            text4 = 'Please Visit A Doctor As Soon As Possible'
             def stream_data1():
                 for word in text1.split(" "):
                     yield word + " "
@@ -89,8 +90,8 @@ def show_page():
             st.write_stream(stream_data4)
             
         elif y_prediction == 0:
-            text1 = ' بر اساس تحلیل من ، شما در سلامتی کامل هستید'
-            text2 = 'Based on my analysis, you are totally healthy'
+            text1 = 'بر اساس تحلیل من ، شما در سلامتی کامل هستید'
+            text2 = 'Based On My Analysis, You are Totally Healthy'
             def stream_data1():
                 for word in text1.split(" "):
                     yield word + " "
